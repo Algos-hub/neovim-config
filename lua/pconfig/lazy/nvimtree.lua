@@ -10,7 +10,7 @@ return {
             hijack_cursor = true,
             disable_netrw = true,
             view = {
-                width = 40,
+                width = 50,
                 side = "right",
                 number = true,
                 relativenumber = true,
