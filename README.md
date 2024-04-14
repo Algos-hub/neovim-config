@@ -4,6 +4,7 @@ This is my config files for my personal Neovim installation.
 
 The following plugins are being used:
 
+Theme: ['bignimbus/pop-punk.vim'](https://github.com/bignimbus/pop-punk.vim)\
 Auto-pairing (parenthesis, brackets, quotes, etc...): ['windwp/nvim-autopairs'](https://github.com/windwp/nvim-autopairs)\
 Icons: ['nvim-tree/nvim-web-devicons'](https://github.com/nvim-tree/nvim-web-devicons)\
 Git wrapper: ['tpope/vim-fugitive'](https://github.com/tpope/vim-fugitive)\
