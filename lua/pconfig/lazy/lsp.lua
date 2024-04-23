@@ -91,7 +91,7 @@ return {
 			'tsserver',
 			'yamlls',
 			'sqlls',
-			'intelephense',
+			'phpactor',
 			'pyre',
 			'kotlin_language_server',
 			'jsonls',
@@ -116,7 +116,7 @@ return {
 	lspconfig.sqlls.setup {
 		capabilities = capabilities
 	}
-	lspconfig.intelephense.setup {
+	lspconfig.phpactor.setup {
 		capabilities = capabilities
 	}
 	lspconfig.pyre.setup {
