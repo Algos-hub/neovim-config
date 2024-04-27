@@ -31,11 +31,9 @@ vim.opt.splitbelow = true
 vim.opt.ignorecase = true   
 vim.opt.smartcase = true     
 vim.opt.linebreak = true      
-vim.opt.termguicolors = true
 
 vim.o.wildmode = "longest,list:longest,full"
 vim.o.mouse = "a"
-vim.o.termguicolors = true
 vim.o.clipboard = "unnamedplus"
 
 vim.opt.completeopt="noinsert,menuone,noselect" 
@@ -55,9 +53,6 @@ vim.cmd("filetype plugin indent on")
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- optionally enable 24-bit colour
-vim.opt.termguicolors = true
 vim.opt.fillchars = { eob = ' ' }
 
 vim.opt.statuscolumn = "%=%{v:relnum?v:relnum:v:lnum} %s"
-
