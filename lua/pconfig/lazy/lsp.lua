@@ -101,7 +101,8 @@ return {
 			'cssls',
 			'clangd',
 			'angularls',
-			'vimls'
+			'vimls',
+            'lua_ls'
 			}
 		})
 
@@ -147,6 +148,9 @@ return {
 		capabilities = capabilities
 	}
 	lspconfig.angularls.setup {
+		capabilities = capabilities
+	}
+	lspconfig.lua_ls.setup {
 		capabilities = capabilities
 	}
 	
