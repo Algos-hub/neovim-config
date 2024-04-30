@@ -25,18 +25,18 @@ vim.opt.colorcolumn = "120"
 
 vim.opt.wrap = true
 
-vim.opt.splitright = true     
+vim.opt.splitright = true
 vim.opt.splitbelow = true
 
-vim.opt.ignorecase = true   
-vim.opt.smartcase = true     
-vim.opt.linebreak = true      
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.linebreak = true
 
 vim.o.wildmode = "longest,list:longest,full"
 vim.o.mouse = "a"
 vim.o.clipboard = "unnamedplus"
 
-vim.opt.completeopt="noinsert,menuone,noselect" 
+vim.opt.completeopt = "noinsert,menuone,noselect"
 
 vim.opt.autoindent = true
 
