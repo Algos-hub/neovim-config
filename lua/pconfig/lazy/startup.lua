@@ -6,8 +6,8 @@ return {
     },
     config = function()
         require("startup").setup(
-        {
-            theme ='evil'
-        })
+            {
+                theme = 'evil'
+            })
     end
-  }
+}

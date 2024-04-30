@@ -6,7 +6,7 @@ return {
             -- A list of parser names, or "all"
             ensure_installed = {
                 "vimdoc", "javascript", "typescript", "c", "lua",
-                "jsdoc", "bash", "css", "html", "php", "python", "scss", "sql", "svelte", "tmux", 
+                "jsdoc", "bash", "css", "html", "php", "python", "scss", "sql", "svelte", "tmux",
                 "tsx", "twig", "vue", "yaml"
             },
 
@@ -37,7 +37,7 @@ return {
         treesitter_parser_config.templ = {
             install_info = {
                 url = "https://github.com/vrischmann/tree-sitter-templ.git",
-                files = {"src/parser.c", "src/scanner.c"},
+                files = { "src/parser.c", "src/scanner.c" },
                 branch = "master",
             },
         }

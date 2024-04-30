@@ -4,24 +4,24 @@ return {
     config = function()
         local custom_pop_punk = require('lualine.themes.horizon')
         local colors = {
-            n_a_background = 'C336FA',
-            n_b_background = '2D373E',
-            n_b_foreground = 'F6E1F6',
-            n_c_foreground = '707191',
-            i_a_background = '158CFB',
-            i_b_background = '465390',
-            i_b_foreground = 'E4E1FD',
-            v_a_background = 'FD9C29',
+            n_a_background   = 'C336FA',
+            n_b_background   = '2D373E',
+            n_b_foreground   = 'F6E1F6',
+            n_c_foreground   = '707191',
+            i_a_background   = '158CFB',
+            i_b_background   = '465390',
+            i_b_foreground   = 'E4E1FD',
+            v_a_background   = 'FD9C29',
             vrc_b_background = '3B3B3B',
-            v_b_foreground = 'CBC8E1',
-            r_a_background = 'FFFD38',
-            r_b_foreground = 'FFFDD0',
-            c_a_background = '09F7A0',
-            c_b_foreground = 'DCFFD0',
-            d_a_background = '777C87',
-            d_b_background = '2F373C',
-            d_b_foreground = '8788AB',
-            black        = '000000',
+            v_b_foreground   = 'CBC8E1',
+            r_a_background   = 'FFFD38',
+            r_b_foreground   = 'FFFDD0',
+            c_a_background   = '09F7A0',
+            c_b_foreground   = 'DCFFD0',
+            d_a_background   = '777C87',
+            d_b_background   = '2F373C',
+            d_b_foreground   = '8788AB',
+            black            = '000000',
         }
 
         -- Normal mode
@@ -71,11 +71,11 @@ return {
                         mode = 2,
                     }
                 },
-                lualine_b = {''},
-                lualine_c = {''},
+                lualine_b = { '' },
+                lualine_c = { '' },
                 lualine_x = {},
                 lualine_y = {},
-                lualine_z = {'tabs'}
+                lualine_z = { 'tabs' }
             }
         })
     end
