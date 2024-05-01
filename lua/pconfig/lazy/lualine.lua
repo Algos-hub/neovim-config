@@ -69,10 +69,11 @@ return {
                     {
                         'buffers',
                         mode = 2,
+                        max_length = vim.o.columns - 10,
                     }
                 },
-                lualine_b = { '' },
-                lualine_c = { '' },
+                lualine_b = {},
+                lualine_c = {},
                 lualine_x = {},
                 lualine_y = {},
                 lualine_z = { 'tabs' }
