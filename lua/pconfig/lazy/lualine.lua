@@ -2,68 +2,164 @@ return {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
-        local custom_pop_punk = require('lualine.themes.horizon')
-        local colors = {
-            n_a_background   = 'C336FA',
-            n_b_background   = '2D373E',
-            n_b_foreground   = 'F6E1F6',
-            n_c_foreground   = '707191',
-            i_a_background   = '158CFB',
-            i_b_background   = '465390',
-            i_b_foreground   = 'E4E1FD',
-            v_a_background   = 'FD9C29',
-            vrc_b_background = '3B3B3B',
-            v_b_foreground   = 'CBC8E1',
-            r_a_background   = 'FFFD38',
-            r_b_foreground   = 'FFFDD0',
-            c_a_background   = '09F7A0',
-            c_b_foreground   = 'DCFFD0',
-            d_a_background   = '777C87',
-            d_b_background   = '2F373C',
-            d_b_foreground   = '8788AB',
-            black            = '000000',
+        local solarized_palette = require 'solarized.palette'
+        local colors = solarized_palette.get_colors()
+        local foreground = colors.base02
+
+        local custom_theme = {
+            normal = {
+                a = { fg = foreground, bg = colors.blue },
+                b = { fg = foreground, bg = colors.base1 },
+                c = { fg = colors.base2, bg = colors.base04 },
+            },
+            insert = {
+                a = { fg = foreground, bg = colors.green },
+            },
+            visual = {
+                a = { fg = foreground, bg = colors.magenta },
+            },
+            replace = {
+                a = { fg = foreground, bg = colors.red },
+            },
+            command = {
+                a = { fg = colors.base03, bg = colors.red },
+            },
+            inactive = {
+                a = { fg = foreground, bg = colors.base1 },
+                b = { fg = colors.base2, bg = colors.base04 },
+                c = { fg = colors.base04, bg = colors.base04 },
+            },
         }
 
-        -- Normal mode
-        custom_pop_punk.normal = {
-            a = { bg = colors.n_a_background, fg = colors.black, },
-            b = { bg = colors.n_b_background, fg = colors.n_b_foreground, },
-            c = { bg = colors.black, fg = colors.n_c_foreground, },
+        local hide_in_width = function()
+            return vim.fn.winwidth(0) > 80
+        end
+
+        local sections = {}
+
+        local icons = {
+            vim = '',
+            git = '',
+            diff = { added = '󰐕', modified = '󰧞', removed = '󰍴' },
+            default = { left = '', right = ' ' },
+            round = { left = '', right = '' },
+            block = { left = '█', right = '█' },
+            arrow = { left = '', right = '' },
         }
 
-        -- Insert mode
-        custom_pop_punk.insert = {
-            a = { bg = colors.i_a_background, fg = colors.black, },
-            b = { bg = colors.i_b_background, fg = colors.i_b_foreground, },
-        }
+        local function ins_config(location, component)
+            sections['lualine_' .. location] = component
+        end
 
-        -- Visual mode
-        custom_pop_punk.visual = {
-            a = { bg = colors.v_a_background, fg = colors.black, },
-            b = { bg = colors.vrc_b_background, fg = colors.v_b_foreground, },
-        }
+        ins_config('a', {
+            {
+                'mode',
+                icon = icons.vim,
+                separator = { left = icons.block.left, right = icons.default.right },
+                right_padding = 2,
+            },
+        })
 
-        -- Replace mode
-        custom_pop_punk.replace = {
-            a = { bg = colors.r_a_background, fg = colors.black, },
-            b = { bg = colors.vrc_b_background, fg = colors.r_b_foreground },
-        }
+        ins_config('b', {
+            {
+                'filename',
+                fmt = function(filename)
+                    local icon = '󰈚'
 
-        -- Command mode
-        custom_pop_punk.command = {
-            a = { bg = colors.c_a_background, fg = colors.black, },
-            b = { bg = colors.vrc_b_background, fg = colors.c_b_foreground, },
-        }
+                    local devicons_present, devicons = pcall(require, 'nvim-web-devicons')
 
-        -- Inactive mode
-        custom_pop_punk.inactive = {
-            a = { bg = colors.n_b_background, fg = colors.n_b_foreground, },
-        }
+                    if devicons_present then
+                        local ft_icon = devicons.get_icon(filename)
+                        icon = (ft_icon ~= nil and ft_icon) or icon
+                    end
+
+                    return string.format('%s %s', icon, filename)
+                end,
+            },
+        })
+
+        ins_config('c', {
+            {
+                'branch',
+                icon = { icons.git, color = { fg = colors.magenta } },
+                cond = hide_in_width,
+            },
+            {
+                'diff',
+                symbols = icons.diff,
+                colored = true,
+                diff_color = {
+                    added = { fg = colors.green },
+                    modified = { fg = colors.orange },
+                    removed = { fg = colors.red },
+                },
+                cond = hide_in_width,
+            },
+        })
+        ins_config('x', {})
+
+        ins_config('y', {
+            {
+                'progress',
+                fmt = function(progress)
+                    local spinners = { '󰚀', '󰪞', '󰪠', '󰪡', '󰪢', '󰪣', '󰪤', '󰚀' }
+
+                    if string.match(progress, '%a+') then
+                        return progress
+                    end
+
+                    local p = tonumber(string.match(progress, '%d+'))
+
+                    if p ~= nil then
+                        local index = math.floor(p / (100 / #spinners)) + 1
+                        return '  ' .. spinners[index]
+                    end
+                end,
+                separator = { left = icons.default.left },
+                cond = hide_in_width,
+            },
+            {
+                'location',
+                cond = hide_in_width,
+            },
+        })
+
+        ins_config('z', {
+            {
+                function()
+                    local msg = 'No Active Lsp'
+                    local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
+                    local clients = vim.lsp.get_clients()
+                    if next(clients) == nil then
+                        return msg
+                    end
+                    for _, client in ipairs(clients) do
+                        local filetypes = client.config.filetypes
+                        if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+                            if client.name ~= 'null-ls' then
+                                return client.name
+                            end
+                        end
+                    end
+                    return msg
+                end,
+            },
+        })
 
         require('lualine').setup({
             options = {
-                theme = custom_pop_punk,
+                theme = custom_theme,
+                component_separators = '',
+                section_separators = { left = icons.default.right, right = icons.default.left },
+                disabled_filetypes = {
+                    'NvimTree',
+                    'starter',
+                },
+                refresh = {
+                    statusline = 1000,
+                },
             },
+            sections = sections,
             tabline = {
                 lualine_a = {
                     {
@@ -76,7 +172,7 @@ return {
                 lualine_c = {},
                 lualine_x = {},
                 lualine_y = {},
-                lualine_z = { 'tabs' }
+                lualine_z = {}
             }
         })
     end

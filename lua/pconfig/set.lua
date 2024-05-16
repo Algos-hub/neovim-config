@@ -56,3 +56,4 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.fillchars = { eob = ' ' }
 
 vim.opt.statuscolumn = "%=%{v:relnum?v:relnum:v:lnum} %s"
+vim.o.termguicolors = true
