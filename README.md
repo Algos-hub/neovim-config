@@ -4,7 +4,7 @@ This is my config files for my personal Neovim installation.
 
 The following plugins are being used:
 
-Theme: ['bignimbus/pop-punk.vim'](https://github.com/bignimbus/pop-punk.vim)\
+Theme: ['maxmx03/solarized.nvim'](https://github.com/maxmx03/solarized.nvim)\
 Auto-pairing (parenthesis, brackets, quotes, etc...): ['windwp/nvim-autopairs'](https://github.com/windwp/nvim-autopairs)\
 Icons: ['nvim-tree/nvim-web-devicons'](https://github.com/nvim-tree/nvim-web-devicons)\
 Git wrapper: ['tpope/vim-fugitive'](https://github.com/tpope/vim-fugitive)\
@@ -12,7 +12,6 @@ Git buffer integration: ['lewis6991/gitsigns.nvim'](https://github.com/lewis6991
 Statusline: ['nvim-lualine/lualine.nvim'](https://github.com/nvim-lualine/lualine.nvim)\
 Comment shortcut: ['numToStr/Comment.nvim'](https://github.com/numToStr/Comment.nvim)\
 File tree: ['nvim-tree/nvim-tree.lua'](https://github.com/nvim-tree/nvim-tree.lua)\
-File formatting (mainly for prettier): ['stevearc/conform.nvim'](https://github.com/stevearc/conform.nvim)\
 Custom ColorColumn behavior: ['m4xshen/smartcolumn.nvim'](https://github.com/m4xshen/smartcolumn.nvim)\
 Custom splash screen: ['startup-nvim/startup.nvim'](https://github.com/startup-nvim/startup.nvim)\
 &nbsp;&nbsp;&nbsp;&nbsp;dependencies:\
