@@ -45,7 +45,7 @@ This is my config files for my personal Neovim installation.
 &nbsp;&nbsp;&nbsp;&nbsp;If you do not wish to use telescope-fzf-native.nvim you can delete `telescope-fzf.lua` and remove the lines 4-13 and 17-24 from `telescope.lua`
 
 #### `telescope.lua`
-```
+```lua
 return {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.6',
