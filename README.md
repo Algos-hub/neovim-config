@@ -63,7 +63,7 @@ return {
         }
     },
 
-    __ End of comment
+    -- End of comment
 
     config = function()
         require('telescope').setup({
