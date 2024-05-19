@@ -98,6 +98,6 @@ return {
 &nbsp;&nbsp;&nbsp;&nbsp;To install simply clone this repo into your `.config` directory and rename the `neovim-config` directory to `nvim`.\
 &nbsp;&nbsp;&nbsp;&nbsp;If you already have an `nvim` directory you might need to delete/move it somewhere else first.
 
-```
+```bash
     git clone https://github.com/Algos-hub/neovim-config ~/.config/nvim
 ```
