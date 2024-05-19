@@ -4,32 +4,33 @@ This is my config files for my personal Neovim installation.
 
 ### Plugins used:
 
-&nbsp;&nbsp;&nbsp;&nbsp;* Theme: ['maxmx03/solarized.nvim'](https://github.com/maxmx03/solarized.nvim)\
-&nbsp;&nbsp;&nbsp;&nbsp;* Auto-pairing (parenthesis, brackets, quotes, etc...): ['windwp/nvim-autopairs'](https://github.com/windwp/nvim-autopairs)\
-&nbsp;&nbsp;&nbsp;&nbsp;* Icons: ['nvim-tree/nvim-web-devicons'](https://github.com/nvim-tree/nvim-web-devicons)\
-&nbsp;&nbsp;&nbsp;&nbsp;* Git wrapper: ['tpope/vim-fugitive'](https://github.com/tpope/vim-fugitive)\
-&nbsp;&nbsp;&nbsp;&nbsp;* Git buffer integration: ['lewis6991/gitsigns.nvim'](https://github.com/lewis6991/gitsigns.nvim)\
-&nbsp;&nbsp;&nbsp;&nbsp;* Statusline: ['nvim-lualine/lualine.nvim'](https://github.com/nvim-lualine/lualine.nvim)\
-&nbsp;&nbsp;&nbsp;&nbsp;* Comment shortcut: ['numToStr/Comment.nvim'](https://github.com/numToStr/Comment.nvim)\
-&nbsp;&nbsp;&nbsp;&nbsp;* File tree: ['nvim-tree/nvim-tree.lua'](https://github.com/nvim-tree/nvim-tree.lua)\
-&nbsp;&nbsp;&nbsp;&nbsp;* Custom ColorColumn behavior: ['m4xshen/smartcolumn.nvim'](https://github.com/m4xshen/smartcolumn.nvim)\
-&nbsp;&nbsp;&nbsp;&nbsp;* Custom splash screen: ['startup-nvim/startup.nvim'](https://github.com/startup-nvim/startup.nvim)\
-&nbsp;&nbsp;&nbsp;&nbsp;* Fuzzy finder: ['nvim-telescope/telescope.nvim'](https://github.com/nvim-telescope/telescope.nvim)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   dependency: ['nvim-lua/plenary.nvim'](https://github.com/nvim-lua/plenary.nvim)  \
-&nbsp;&nbsp;&nbsp;&nbsp;* Syntax highlighting: ['nvim-treesitter/nvim-treesitter'](https://github.com/nvim-treesitter/nvim-treesitter)\
-&nbsp;&nbsp;&nbsp;&nbsp;* Language Server Protocol (LSP): ['neovim/nvim-lspconfig'](https://github.com/neovim/nvim-lspconfig)\
+&nbsp;&nbsp;&nbsp;&nbsp;* Theme: [maxmx03/solarized.nvim](https://github.com/maxmx03/solarized.nvim)\
+&nbsp;&nbsp;&nbsp;&nbsp;* Tmux navigation integration: [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)\
+&nbsp;&nbsp;&nbsp;&nbsp;* Auto-pairing (parenthesis, brackets, quotes, etc...): [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)\
+&nbsp;&nbsp;&nbsp;&nbsp;* Icons: [nvim-tree/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)\
+&nbsp;&nbsp;&nbsp;&nbsp;* Git wrapper: [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)\
+&nbsp;&nbsp;&nbsp;&nbsp;* Git buffer integration: [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)\
+&nbsp;&nbsp;&nbsp;&nbsp;* Statusline: [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)\
+&nbsp;&nbsp;&nbsp;&nbsp;* Comment shortcut: [numToStr/Comment.nvim](https://github.com/numToStr/Comment.nvim)\
+&nbsp;&nbsp;&nbsp;&nbsp;* File tree: [nvim-tree/nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)\
+&nbsp;&nbsp;&nbsp;&nbsp;* Custom ColorColumn behavior: [m4xshen/smartcolumn.nvim](https://github.com/m4xshen/smartcolumn.nvim)\
+&nbsp;&nbsp;&nbsp;&nbsp;* Custom splash screen: [startup-nvim/startup.nvim](https://github.com/startup-nvim/startup.nvim)\
+&nbsp;&nbsp;&nbsp;&nbsp;* Fuzzy finder: [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   dependency: [nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim)  \
+&nbsp;&nbsp;&nbsp;&nbsp;* Syntax highlighting: [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)\
+&nbsp;&nbsp;&nbsp;&nbsp;* Language Server Protocol (LSP): [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   dependencies:\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* ['hrsh7th/cmp-nvim-lsp'](https://github.com/hrsh7th/cmp-nvim-lsp)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* ['hrsh7th/cmp-buffer'](https://github.com/hrsh7th/cmp-buffer)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* ['hrsh7th/cmp-path'](https://github.com/hrsh7th/cmp-path)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* ['hrsh7th/cmp-cmdline'](https://github.com/hrsh7th/cmp-cmdline)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* ['hrsh7th/nvim-cmp'](https://github.com/hrsh7th/nvim-cmp)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* ['williamboman/mason.nvim'](https://github.com/williamboman/mason.nvim)(LSP package manager)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* ['williamboman/mason-lspconfig.nvim'](https://github.com/williamboman/mason-lspconfig.nvim)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* ['kosayoda/nvim-lightbulb'](https://github.com/kosayoda/nvim-lightbulb)(For code actions notifications)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* ['hrsh7th/cmp-vsnip'](https://github.com/hrsh7th/cmp-vsnip)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* ['hrsh7th/vim-vsnip'](https://github.com/hrsh7th/vim-vsnip)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* ['hrsh7th/vim-vsnip-integ'](https://github.com/hrsh7th/vim-vsnip-integ)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* [hrsh7th/cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* [hrsh7th/cmp-buffer](https://github.com/hrsh7th/cmp-buffer)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* [hrsh7th/cmp-path](https://github.com/hrsh7th/cmp-path)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* [hrsh7th/cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim)(LSP package manager)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* [williamboman/mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* [kosayoda/nvim-lightbulb](https://github.com/kosayoda/nvim-lightbulb)(For code actions notifications)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* [hrsh7th/cmp-vsnip](https://github.com/hrsh7th/cmp-vsnip)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* [hrsh7th/vim-vsnip](https://github.com/hrsh7th/vim-vsnip)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* [hrsh7th/vim-vsnip-integ](https://github.com/hrsh7th/vim-vsnip-integ)\
 
 # Installation
 
