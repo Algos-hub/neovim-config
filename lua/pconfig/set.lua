@@ -57,3 +57,6 @@ vim.opt.fillchars = { eob = ' ' }
 
 vim.opt.statuscolumn = "%=%{v:relnum?v:relnum:v:lnum} %s"
 vim.o.termguicolors = true
+
+vim.cmd("let g:loaded_ruby_provider = 0")
+vim.cmd("let g:loaded_perl_provider = 0")
