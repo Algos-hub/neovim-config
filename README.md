@@ -97,8 +97,8 @@ return {
 
 ### 3: Cloning this repo
 
-    To install simply clone this repo into your `.config` directory and rename the `neovim-config` directory to `nvim`.\
-    If you already have an `nvim` directory you might need to delete/move it somewhere else first.
+    To install, clone this repo into your `.config` directory and rename the `neovim-config` directory to `nvim`.\
+    If you already have an `nvim` directory, you may need to delete/move it somewhere else first.
 
 ```bash
     git clone https://github.com/Algos-hub/neovim-config ~/.config/nvim
