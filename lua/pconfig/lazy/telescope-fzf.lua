@@ -1,8 +1,8 @@
 return {
     'nvim-telescope/telescope-fzf-native.nvim',
-    build = 'make',
+    build = 'CFLAGS=-march=native make',
     config = function()
-        require('telescope').setup {
+        require('telescope').setup({
             extensions = {
                 fzf = {
                     fuzzy = true,
@@ -11,7 +11,7 @@ return {
                     case_mode = "smart_case",
                 }
             }
-        }
-        -- require('telescope').load_extension('fzf')
+        })
+        require('telescope').load_extension('fzf')
     end,
 }

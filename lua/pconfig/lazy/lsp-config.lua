@@ -2,7 +2,7 @@ return {
     {
         'williamboman/mason.nvim',
         lazy = false,
-        config = function ()
+        config = function()
             require("mason").setup()
         end,
     },
@@ -17,7 +17,6 @@ return {
         'neovim/nvim-lspconfig',
 
         config = function()
-
             -- Set up lspconfig.
             local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
@@ -43,25 +42,25 @@ return {
                 },
 
                 handlers = {
-                    function (server_name)
+                    function(server_name)
                         require("lspconfig")[server_name].setup({
                             capabilities = capabilities
                         })
                     end,
                     ["lua_ls"] = function()
-                    local lspconfig = require("lspconfig")
-                    lspconfig.lua_ls.setup {
-                        capabilities = capabilities,
-                        settings = {
-                            Lua = {
-				    runtime = { version = "Lua 5.1" },
-                                diagnostics = {
-                                    globals = { "vim", "it", "describe", "before_each", "after_each" },
+                        local lspconfig = require("lspconfig")
+                        lspconfig.lua_ls.setup {
+                            capabilities = capabilities,
+                            settings = {
+                                Lua = {
+                                    runtime = { version = "Lua 5.1" },
+                                    diagnostics = {
+                                        globals = { "vim", "it", "describe", "before_each", "after_each" },
+                                    }
                                 }
                             }
                         }
-                    }
-                end,
+                    end,
                 }
             })
 
@@ -85,7 +84,7 @@ return {
                     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
                     vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
                     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-                    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+                    vim.keymap.set('n', '<C-m>', vim.lsp.buf.signature_help, opts)
                     vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
                     vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
                     vim.keymap.set('n', '<space>wl', function()

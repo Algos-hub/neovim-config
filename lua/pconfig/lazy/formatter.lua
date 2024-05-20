@@ -9,7 +9,6 @@ return {
         null_ls.setup({
             sources = {
                 -- Formatting
-                null_ls.builtins.formatting.htmlbeautifier,
                 null_ls.builtins.formatting.stylua,
                 null_ls.builtins.formatting.prettierd,
                 null_ls.builtins.formatting.pretty_php,
