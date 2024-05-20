@@ -18,6 +18,8 @@ This is my config files for my personal Neovim installation.
     * Fuzzy finder: [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)\
             dependency: [nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim)  \
     * Syntax highlighting: [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)\
+    * Formatter: [nvimtools/none-ls.nvim](https://github.com/nvimtools/none-ls.nvim)\
+            dependency: [nvimtools/none-ls-extras.nvim](https://github.com/nvimtools/none-ls-extras.nvim)  \
     * Language Server Protocol (LSP): [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)\
             dependencies:\
             * [hrsh7th/cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)\
