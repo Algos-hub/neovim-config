@@ -1,6 +1,6 @@
 return {
     "startup-nvim/startup.nvim",
-    dependecies = {
+    dependencies = {
         "nvim-telescope/telescope.nvim",
         "nvim-lua/plenary.nvim"
     },
