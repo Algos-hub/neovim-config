@@ -16,8 +16,8 @@ return {
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 			vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
-			vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "#002b36" })
-			vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "#002b36" })
+			vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
+			vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "none" })
 			vim.api.nvim_set_hl(0, "TelescopeTitle", { bg = "none" })
 		end,
 	},
