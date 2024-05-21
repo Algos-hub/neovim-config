@@ -4,10 +4,10 @@ This is my config files for my personal Neovim installation.
 
 ### Plugins used:
 
-_ Theme: [maxmx03/solarized.nvim](https://github.com/maxmx03/solarized.nvim)\
-    _ Tmux navigation integration: [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)\
-    _ Auto-pairing (parenthesis, brackets, quotes, etc...): [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)\
-    _ Icons: [nvim-tree/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)\
+    * Theme: [maxmx03/solarized.nvim](https://github.com/maxmx03/solarized.nvim)\
+    * Tmux navigation integration: [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)\
+    * Auto-pairing (parenthesis, brackets, quotes, etc...): [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)\
+    * Icons: [nvim-tree/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)\
     * Git wrapper: [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)\
     * Git buffer integration: [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)\
     * Statusline: [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)\
