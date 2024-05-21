@@ -17,6 +17,10 @@ return {
 		"neovim/nvim-lspconfig",
 
 		config = function()
+			vim.diagnostic.config({
+				signs = false,
+				underline = true,
+			})
 			-- Overriding the default color scheme given by solarized.nvim
 			local set_hl_for_floating_window = function()
 				vim.api.nvim_set_hl(0, "NormalFloat", {
