@@ -38,22 +38,22 @@ _ Theme: [maxmx03/solarized.nvim](https://github.com/maxmx03/solarized.nvim)\
 
 ### Startup screen
 
-![alt-text](https://github.com/Algos-hub/neovim-config/resources/startup.jpg "Startup screen")
+![alt-text](https://github.com/Algos-hub/neovim-config/blob/main/resources/startup.jpg "Startup screen")
 
 ### LSP integration
 
-![alt-text](https://github.com/Algos-hub/neovim-config/resources/lsp_integration_1.jpg "Code completion")
-![alt-text](https://github.com/Algos-hub/neovim-config/resources/lsp_integration_2.jpg "Code completion definition")
-![alt-text](https://github.com/Algos-hub/neovim-config/resources/lsp_integration_3.jpg "Buffer hover")
-![alt-text](https://github.com/Algos-hub/neovim-config/resources/code_actions.jpg "Code actions popup")
+![alt-text](https://github.com/Algos-hub/neovim-config/blob/main/resources/lsp_integration_1.jpg "Code completion")
+![alt-text](https://github.com/Algos-hub/neovim-config/blob/main/resources/lsp_integration_2.jpg "Code completion definition")
+![alt-text](https://github.com/Algos-hub/neovim-config/blob/main/resources/lsp_integration_3.jpg "Buffer hover")
+![alt-text](https://github.com/Algos-hub/neovim-config/blob/main/resources/code_actions.jpg "Code actions popup")
 
 ### File Explorer (nvim-tree)
 
-![alt-text](https://github.com/Algos-hub/neovim-config/resources/nvim_tree.jpg "File explorer")
+![alt-text](https://github.com/Algos-hub/neovim-config/blob/main/resources/nvim_tree.jpg "File explorer")
 
 ### Fuzzy finder (telescope)
 
-![alt-text](https://github.com/Algos-hub/neovim-config/resources/telescope.jpg "Fuzzy finder popup")
+![alt-text](https://github.com/Algos-hub/neovim-config/blob/main/resources/telescope.jpg "Fuzzy finder popup")
 
 # Installation
 
