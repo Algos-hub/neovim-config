@@ -47,15 +47,15 @@ vim.opt.ttyfast = true
 
 vim.opt.scrolloff = 999
 
-vim.cmd("highlight ColorColumn ctermbg=lightcyan guibg=lightcyan")
+vim.api.nvim_set_hl(0, "ColorColumn", { bg = "cyan" })
+
 vim.cmd("syntax on")
 vim.cmd("filetype plugin indent on")
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.opt.fillchars = { eob = ' ' }
+vim.opt.fillchars = { eob = " " }
 
-vim.opt.statuscolumn = "%=%{v:relnum?v:relnum:v:lnum} %s"
 vim.o.termguicolors = true
 
 vim.cmd("let g:loaded_ruby_provider = 0")

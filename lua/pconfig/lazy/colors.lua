@@ -1,10 +1,10 @@
 return {
-    'maxmx03/solarized.nvim',
+    "maxmx03/solarized.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-        vim.o.background = 'dark' -- or 'light'
+        vim.o.background = "dark"
 
-        vim.cmd.colorscheme 'solarized'
+        vim.cmd.colorscheme("solarized")
     end,
 }

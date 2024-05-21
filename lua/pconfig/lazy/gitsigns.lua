@@ -1,15 +1,16 @@
 return {
-    'lewis6991/gitsigns.nvim',
+    "lewis6991/gitsigns.nvim",
     config = function()
-        require('gitsigns').setup({
+        require("gitsigns").setup({
             signcolumn = true,
             on_attach = function()
                 vim.wo.signcolumn = "yes"
                 vim.opt.statuscolumn = "%=%{v:relnum?v:relnum:v:lnum} %s"
-                vim.cmd(":highlight GitSignsAdd ctermbg=NONE ctermfg=green")
-                vim.cmd(":highlight GitSignsDelete ctermbg=NONE ctermfg=red")
-                vim.cmd(":highlight GitSignsChange ctermbg=NONE ctermfg=darkyellow")
-            end
+                vim.api.nvim_set_hl(0, "SignColumn", { bg = "#002b36" })
+                vim.api.nvim_set_hl(0, "GitSignsAdd", { fg = "green", bg = "none" })
+                vim.api.nvim_set_hl(0, "GitSignsDelete", { fg = "red", bg = "none" })
+                vim.api.nvim_set_hl(0, "GitSignsChange", { fg = "orange", bg = "none" })
+            end,
         })
-    end
+    end,
 }
