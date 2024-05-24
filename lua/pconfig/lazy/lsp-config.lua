@@ -62,7 +62,7 @@ return {
 					"yamlls",
 					"sqlls",
 					"phpactor",
-					"pyre",
+					"pylsp",
 					"kotlin_language_server",
 					"jsonls",
 					"html",
