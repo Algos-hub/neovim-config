@@ -6,6 +6,15 @@ return {
     config = function()
         local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
         local null_ls = require("null-ls")
+        local file_exists = function(file)
+            local f = io.open(file, "r")
+            if f ~= nil then
+                io.close(f)
+                return true
+            else
+                return false
+            end
+        end
         null_ls.setup({
             sources = {
                 -- Formatting
@@ -21,7 +30,6 @@ return {
                 -- Diagnostics
                 null_ls.builtins.diagnostics.stylelint,
                 null_ls.builtins.diagnostics.ktlint,
-                require("none-ls.diagnostics.eslint"),
             },
             on_attach = function(client, bufnr)
                 if client.supports_method("textDocument/formatting") then
