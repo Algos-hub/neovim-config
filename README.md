@@ -27,13 +27,13 @@ This is my config files for my personal Neovim installation.
             * [hrsh7th/cmp-path](https://github.com/hrsh7th/cmp-path)\
             * [hrsh7th/cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)\
             * [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)\
-            * [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim)(LSP package manager)\
+            * [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim) (LSP package manager)\
             * [williamboman/mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)\
-            * [kosayoda/nvim-lightbulb](https://github.com/kosayoda/nvim-lightbulb)(For code actions notifications)\
+            * [kosayoda/nvim-lightbulb](https://github.com/kosayoda/nvim-lightbulb) (For code actions notifications)\
             * [hrsh7th/cmp-vsnip](https://github.com/hrsh7th/cmp-vsnip)\
             * [hrsh7th/vim-vsnip](https://github.com/hrsh7th/vim-vsnip)\
             * [hrsh7th/vim-vsnip-integ](https://github.com/hrsh7th/vim-vsnip-integ)\
-            * [artemave/workspace-diagnostics.nvim](https://github.com/artemave/workspace-diagnostics.nvim)(For LSP diagnostics per workspace instead of per buffer)\
+            * [artemave/workspace-diagnostics.nvim](https://github.com/artemave/workspace-diagnostics.nvim) (For LSP diagnostics per workspace instead of per buffer)
 
 # Screenshots
 
