@@ -33,6 +33,7 @@ This is my config files for my personal Neovim installation.
             * [hrsh7th/cmp-vsnip](https://github.com/hrsh7th/cmp-vsnip)\
             * [hrsh7th/vim-vsnip](https://github.com/hrsh7th/vim-vsnip)\
             * [hrsh7th/vim-vsnip-integ](https://github.com/hrsh7th/vim-vsnip-integ)\
+            * [artemave/workspace-diagnostics.nvim](https://github.com/artemave/workspace-diagnostics.nvim)(For LSP diagnostics per workspace instead of per buffer)\
 
 # Screenshots
 
