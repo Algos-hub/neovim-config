@@ -13,6 +13,7 @@ return {
             auto_install = true,
         },
     },
+    { "artemave/workspace-diagnostics.nvim" },
     {
         "neovim/nvim-lspconfig",
 
@@ -80,11 +81,30 @@ return {
                         require("lspconfig")[server_name].setup({
                             capabilities = capabilities,
                             handlers = handlers,
+                            on_attach = function(client, bufnr)
+                                require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
+                            end,
+                        })
+                    end,
+                    ["clangd"] = function()
+                        local cmp_nvim_lsp = require("cmp_nvim_lsp")
+                        require("lspconfig").clangd.setup({
+                            on_attach = function(client, bufnr)
+                                require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
+                            end,
+                            capabilities = cmp_nvim_lsp.default_capabilities(),
+                            cmd = {
+                                "clangd",
+                                "--offset-encoding=utf-16",
+                            },
                         })
                     end,
                     ["lua_ls"] = function()
                         local lspconfig = require("lspconfig")
                         lspconfig.lua_ls.setup({
+                            on_attach = function(client, bufnr)
+                                require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
+                            end,
                             capabilities = capabilities,
                             handlers = handlers,
                             settings = {
@@ -133,6 +153,10 @@ return {
                     end, opts)
                 end,
             })
+            vim.lsp.handlers["textDocument/publishDiagnostics"] =
+                vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+                    update_in_insert = true,
+                })
         end,
     },
 }

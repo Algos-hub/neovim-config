@@ -6,10 +6,12 @@ vim.keymap.set({ "n", "v", "o" }, "<leader>1", ":bfirst<cr>")
 vim.keymap.set({ "n", "v", "o" }, "<leader>0", ":blast<cr>")
 vim.keymap.set({ "n", "v", "o" }, "<leader>l", ":b#<cr>")
 vim.keymap.set({ "n", "v", "o" }, "<C-g>", ":LualineBuffersJump! ")
-vim.keymap.set({ "n", "v", "o" }, "<C-f>", ":NvimTreeToggle<cr>")
-vim.keymap.set({ "n", "v", "o" }, "<C-w>", ":nohlsearch<cr>")
-
+--
+-- Pane switching
 vim.keymap.set("n", "C-k", ":wincmd k<CR>")
 vim.keymap.set("n", "C-j", ":wincmd j<CR>")
 vim.keymap.set("n", "C-h", ":wincmd h<CR>")
 vim.keymap.set("n", "C-l", ":wincmd l<CR>")
+
+-- Clear highlights
+vim.keymap.set({ "n", "v", "o" }, "<C-q>", ":nohlsearch<cr>")

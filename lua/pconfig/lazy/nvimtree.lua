@@ -26,6 +26,26 @@ return {
                     end,
                 },
             },
+
+            diagnostics = {
+                enable = true,
+                show_on_dirs = true,
+                icons = {
+                    hint = "",
+                    info = "",
+                    warning = "",
+                    error = "",
+                },
+            },
+
+            log = {
+                enable = true,
+                truncate = true,
+                types = {
+                    diagnostics = true,
+                },
+            },
+
             renderer = {
                 group_empty = true,
                 indent_width = 4,
@@ -34,7 +54,15 @@ return {
                     enable = true,
                 },
             },
+
+            filters = {
+                dotfiles = false,
+            },
         })
+        local api = require("nvim-tree.api")
         vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "none" })
+        vim.keymap.set({ "n", "v", "o" }, "<C-f>", function()
+            api.tree.toggle()
+        end, {})
     end,
 }
