@@ -7,6 +7,8 @@ This is my config files for my personal Neovim installation.
     * Theme: [maxmx03/solarized.nvim](https://github.com/maxmx03/solarized.nvim)\
     * Tmux navigation integration: [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)\
     * Auto-pairing (parenthesis, brackets, quotes, etc...): [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)\
+    * Enhancing `a`/`i` selection: [echasnovski/mini.ai](https://github.com/echasnovski/mini.ai)\
+    * Enhancing surrounding text: [kylechui/nvim-surround](https://github.com/kylechui/nvim-surround)\
     * Icons: [nvim-tree/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)\
     * Git wrapper: [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)\
     * Git buffer integration: [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)\
