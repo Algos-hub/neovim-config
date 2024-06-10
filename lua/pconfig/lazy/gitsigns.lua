@@ -10,6 +10,14 @@ return {
 				vim.api.nvim_set_hl(0, "GitSignsDelete", { fg = "red", bg = "none" })
 				vim.api.nvim_set_hl(0, "GitSignsChange", { fg = "orange", bg = "none" })
 			end,
+			current_line_blame = true,
+			current_line_blame_opts = {
+				virt_text = true,
+				virt_text_pos = "eol",
+				delay = 500,
+				ignore_whitespace = false,
+				virt_text_priority = 100,
+			},
 		})
 	end,
 }
