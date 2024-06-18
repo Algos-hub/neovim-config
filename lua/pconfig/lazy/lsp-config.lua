@@ -68,7 +68,6 @@ return {
                     "jsonls",
                     "html",
                     "eslint",
-                    "cssmodules_ls",
                     "cssls",
                     "clangd",
                     "angularls",
