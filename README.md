@@ -4,7 +4,7 @@ This is my config files for my personal Neovim installation.
 
 <details>
     <summary>
-        <h3> Plugins used:</h3>
+        <h3>    Plugins used:</h3>
     </summary>
 
     * Theme: [maxmx03/solarized.nvim](https://github.com/maxmx03/solarized.nvim)\
