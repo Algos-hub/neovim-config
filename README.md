@@ -2,7 +2,10 @@
 
 This is my config files for my personal Neovim installation.
 
-### Plugins used:
+<details>
+    <summary>
+        <h3> Plugins used:</h3>
+    </summary>
 
     * Theme: [maxmx03/solarized.nvim](https://github.com/maxmx03/solarized.nvim)\
     * Tmux navigation integration: [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)\
@@ -36,6 +39,7 @@ This is my config files for my personal Neovim installation.
             * [hrsh7th/vim-vsnip](https://github.com/hrsh7th/vim-vsnip)\
             * [hrsh7th/vim-vsnip-integ](https://github.com/hrsh7th/vim-vsnip-integ)\
             * [artemave/workspace-diagnostics.nvim](https://github.com/artemave/workspace-diagnostics.nvim) (For LSP diagnostics per workspace instead of per buffer)
+</details>
 
 # Screenshots
 
