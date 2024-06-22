@@ -41,7 +41,8 @@ This is my config files for my personal Neovim installation.
             * [artemave/workspace-diagnostics.nvim](https://github.com/artemave/workspace-diagnostics.nvim) (For LSP diagnostics per workspace instead of per buffer)
 </details>
 
-# Screenshots
+<details>
+    <summary>Screenshots</summary>
 
 ### Startup screen
 
@@ -61,6 +62,7 @@ This is my config files for my personal Neovim installation.
 ### Fuzzy finder (telescope)
 
 ![alt-text](https://github.com/Algos-hub/neovim-config/blob/main/resources/telescope.jpg "Fuzzy finder popup")
+</details>
 
 # Installation
 
